@@ -11,14 +11,13 @@ net.createServer(function(sock){
         console.log('DATA : ' + sock.remoteAddress +':' + data)
       
         
-        if(n++ < 50)
-            if(data == ans){
+        if(data == ans){
                 sock.write('BINGO : ' + ans)
-                process.exit()
+             
             }
         else{
                 sock.write('WRONG')
-                n++
+               
             }
     })
 sock.on('close', function(){

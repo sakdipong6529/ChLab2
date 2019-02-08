@@ -16,7 +16,6 @@ client.on('data', function(data){
     if(i < 6 && data == 'WRONG'||data =='wrong')
         {
             client.write('' + num)
-            //num = Math.floor(Math.random() * 21)
             console.log('Send :' + num)
             console.log('no.:' + i)
             i++
